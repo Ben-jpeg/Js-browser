@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./assets/stylesheet/css/round-photo.css">
+</head>
+
+<body>
+    <h1>Round photo</h1>
+    <div class="brief">
+        <p>
+            Comportement souhaité : créer une ombre au passage de la souris et arrondir la photo lorsque l'on click dessus.
+            <br> (voir round-photo.html)
+        </p>
+    </div>
+    <div id="photo1"><img src="./assets/images/round-photo/photo1.jpg" width="20%"></div>
+    <script>
+        //TODO
+        // Je sélectionne d'abord l'élément que je veux traiter en js from html (photo1)
+        let hulk = document.querySelector('img');
+        console.log(hulk);
+        //Maintenant qu'elle est en variable, je peux l'appeler si besoin et y appliquer des changements
+        //Je vais mettre un micro sur l'image pour qu'elle aie une action spacifique lorsque je passe ma souris dessus, ici l'opacité va etre diminué'
+        let photoround = hulk.addEventListener('mouseover', () => {
+            hulk.style.opacity = '0.4';
+
+            // Et je peux a nouveau l'apeller pour ajouter un micro, cette fois ci c'est pour déclencher un arrondi de l'image au click'
+            let photoround = hulk.addEventListener('click', () => {
+                hulk.style.borderRadius = '320px';
+
+            })
+        })
+    </script>
+</body>
+
+</html>
